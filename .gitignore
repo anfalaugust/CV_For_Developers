@@ -216,3 +216,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Ultralytics / ML outputs
+runs/
+weights/
+*.pt
+
+# Datasets
+datasets/
+*.zip
