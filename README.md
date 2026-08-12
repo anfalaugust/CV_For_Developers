@@ -1,4 +1,4 @@
-# CV For Developers — Boat Analytics & Chess Piece Detection with Ultralytics YOLO
+# CV For Developers: Boat Analytics & Chess Piece Detection with Ultralytics YOLO
 
 An end-to-end computer-vision project built with [Ultralytics](https://docs.ultralytics.com/)
 YOLO11. It covers the full pipeline: running core vision tasks (detection and segmentation),
