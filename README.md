@@ -22,7 +22,7 @@ custom training (`model.train`), evaluation (`model.val`), and export (`model.ex
 
 ### Sample output — boat & person region counting
 
-<video src="https://github.com/anfalaugust/CV_For_Developers/raw/main/videos/region_counting.mp4" controls width="600"></video>
+[<video src="https://github.com/anfalaugust/CV_For_Developers/raw/main/videos/region_counting.mp4" controls width="600"></video>](https://github.com/anfalaugust/CV_For_Developers/raw/main/videos/region_counting.mp4)
 
 Boats and people tracked inside the defined region on the video stream.
 
