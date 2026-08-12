@@ -24,7 +24,7 @@ custom training (`model.train`), evaluation (`model.val`), and export (`model.ex
 
 <video src="https://github.com/anfalaugust/CV_For_Developers/raw/main/videos/region_counting.mp4" controls width="600"></video>
 
-*Boats and people tracked inside the defined region (blue polygon) on the video stream.*
+Boats and people tracked inside the defined region on the video stream.
 
 ## Repository Structure
 
