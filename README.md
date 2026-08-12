@@ -20,6 +20,12 @@ This project demonstrates two complementary use cases:
 (`yolo11n-seg.pt`), object tracking / region counting (Ultralytics `solutions.RegionCounter`),
 custom training (`model.train`), evaluation (`model.val`), and export (`model.export`).
 
+### Sample output — boat & person region counting
+
+![Boat and person region counting](docs/region_counting.png)
+
+*Boats and people tracked inside the defined region (blue polygon) on the video stream.*
+
 ## Repository Structure
 
 ```
