@@ -9,10 +9,10 @@ the trained model, and exporting it for deployment.
 
 This project demonstrates two complementary use cases:
 
-1. **Boat & person video analytics** — detection and instance segmentation of boats on images,
+1. **Boat & person video analytics** : detection and instance segmentation of boats on images,
    then a real OpenCV video pipeline that counts boats and people inside a defined region of a
    video stream using an Ultralytics `solutions` module.
-2. **Chess piece detection** — a YOLO11 model fine-tuned on a custom chess-pieces dataset to
+2. **Chess piece detection** : a YOLO11 model fine-tuned on a custom chess-pieces dataset to
    detect and classify all 13 piece types (both colours), then evaluated and exported for
    deployment.
 
@@ -69,14 +69,14 @@ The project is delivered as two notebooks — run them top to bottom:
 
 ### Pipeline overview
 
-**Notebook 1 — Core tasks & video analytics**
+**Notebook 1 : Core tasks & video analytics**
 - Loads `yolo11n.pt` and runs `predict` on boat images (detection).
 - Loads `yolo11n-seg.pt` and runs `predict` for instance segmentation (boat masks).
 - Builds an OpenCV pipeline (`cv2.VideoCapture` → process → `cv2.VideoWriter`) that samples the
   video to a target FPS and uses `solutions.RegionCounter` to count boats and people inside a
   polygon region.
 
-**Notebook 2 — Training, evaluation, export**
+**Notebook 2 : Training, evaluation, export**
 - Extracts the Roboflow chess dataset and fixes the `data.yaml` train/val/test paths.
 - Fine-tunes `yolo11n.pt` with `model.train` (60 epochs, imgsz 640, batch 16, `freeze=10`,
   early stopping, and augmentation).
@@ -86,7 +86,7 @@ The project is delivered as two notebooks — run them top to bottom:
 ### Training
 
 Fine-tuned `yolo11n.pt` for 60 epochs at image size 640, batch 16, with `patience=15` for early
-stopping and `freeze=10` to keep the backbone frozen and train mainly the head — a sensible
+stopping and `freeze=10` to keep the backbone frozen and train mainly the head, a sensible
 choice for a small (~200 image) dataset. Augmentation (rotation, translation, scale, horizontal
 flip, mosaic, HSV jitter) was used to add variety and limit overfitting. Training curves are
 saved to `results.png`.
@@ -97,8 +97,8 @@ Evaluated on the held-out **test** split at `conf=0.25` and `iou=0.6`, reporting
 mAP50-95, precision, recall, a confusion matrix, and a PR curve. The 0.25 confidence keeps
 recall reasonable so real pieces aren't missed; `iou=0.6` is a moderately strict overlap
 requirement, appropriate because pieces are small and sit close together. The confusion matrix
-shows a strong diagonal (pawns easiest) with the main errors being false negatives — pieces
-occasionally predicted as background — rather than cross-class confusion. For a board-reading
+shows a strong diagonal (pawns easiest) with the main errors being false negatives , pieces
+occasionally predicted as background, rather than cross-class confusion. For a board-reading
 use case, those missed detections are the costly errors, since one undetected piece corrupts
 the board state.
 
